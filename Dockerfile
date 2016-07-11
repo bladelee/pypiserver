@@ -10,8 +10,9 @@ RUN rm -rf /pypiserver
 
 # Data Directory
 RUN mkdir -p /data/packages
+COPY /code/htpasswd.txt /data
 WORKDIR /data
-COPY ../code/htpasswd.txt /data
+
 
 ENTRYPOINT ["pypi-server"]
 CMD ["-p", "80","-P","htpasswd.txt", "packages"]
