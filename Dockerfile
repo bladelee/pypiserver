@@ -10,7 +10,7 @@ RUN rm -rf /pypiserver
 
 # Data Directory
 RUN mkdir -p /data/packages
-COPY /code/htpasswd.txt /data
+COPY  htpasswd.txt /data
 WORKDIR /data
 
 
