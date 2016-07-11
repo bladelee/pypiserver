@@ -15,5 +15,5 @@ WORKDIR /data
 
 
 ENTRYPOINT ["pypi-server"]
-CMD ["-p", "80","-P","htpasswd.txt", "packages"]
+CMD ["-p", "80","-P","htpasswd.txt", "-a", "update,download", "packages"]
 EXPOSE 80
